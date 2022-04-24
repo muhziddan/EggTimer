@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var additionalLabel: UILabel!
     
+    @IBOutlet weak var softImageView: UIImageView!
+    @IBOutlet weak var mediumImageView: UIImageView!
+    @IBOutlet weak var hardImageView: UIImageView!
+    @IBOutlet weak var softButton: UIButton!
+    @IBOutlet weak var mediumButton: UIButton!
+    @IBOutlet weak var hardButton: UIButton!
+    
     let eggTime : [String : Int] = [
         "Soft": 5,
         "Medium": 8,
@@ -39,6 +46,34 @@ class ViewController: UIViewController {
         
         titleLabel.text = "Cooking your \(title) egg~"
         
+        switch title {
+        case "Soft": do {
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+                self.mediumButton.alpha = 0.5
+                self.mediumImageView.alpha = 0.5
+                self.hardButton.alpha = 0.5
+                self.hardImageView.alpha = 0.5
+            }, completion: nil)
+        }
+        case "Medium": do {
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+                self.softButton.alpha = 0.5
+                self.softImageView.alpha = 0.5
+                self.hardButton.alpha = 0.5
+                self.hardImageView.alpha = 0.5
+            }, completion: nil)
+        }
+        case "Hard": do {
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+                self.softButton.alpha = 0.5
+                self.softImageView.alpha = 0.5
+                self.mediumButton.alpha = 0.5
+                self.mediumImageView.alpha = 0.5
+            }, completion: nil)
+        }
+        default: print("Error when choosing eggs")
+        }
+        
         UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {self.progressView.alpha = 1.0}, completion: nil)
         
         timeProgress(totalTime: result)
@@ -56,7 +91,18 @@ class ViewController: UIViewController {
             } else {
                 Timer.invalidate()
                 self.titleLabel.text = "Done!!!"
+                
+                UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
+                    self.softButton.alpha = 1.0
+                    self.softImageView.alpha = 1.0
+                    self.mediumButton.alpha = 1.0
+                    self.mediumImageView.alpha = 1.0
+                    self.hardButton.alpha = 1.0
+                    self.hardImageView.alpha = 1.0
+                }, completion: nil)
+                
                 self.playSound()
+                
                 UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
                     self.progressView.alpha = 0.0
                     self.additionalLabel.alpha = 1.0

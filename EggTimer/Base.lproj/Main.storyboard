@@ -23,23 +23,25 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjS-6C-rrp" userLabel="Title View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="246"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpH-vx-n6L" userLabel="Title Label">
-                                                <rect key="frame" x="11.5" y="105" width="351.5" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpH-vx-n6L" userLabel="Title Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="246"/>
+                                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want more eggs?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5P-78-RzE" userLabel="Additional Label">
-                                                <rect key="frame" x="110.5" y="161" width="153.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="106" y="160" width="162" height="26"/>
+                                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="WpH-vx-n6L" firstAttribute="centerY" secondItem="UjS-6C-rrp" secondAttribute="centerY" id="5ez-do-zMA"/>
-                                            <constraint firstItem="WpH-vx-n6L" firstAttribute="centerX" secondItem="UjS-6C-rrp" secondAttribute="centerX" id="M6L-Zl-dOA"/>
-                                            <constraint firstItem="s5P-78-RzE" firstAttribute="top" secondItem="WpH-vx-n6L" secondAttribute="bottom" constant="20" id="Umt-zc-zy3"/>
+                                            <constraint firstAttribute="bottom" secondItem="WpH-vx-n6L" secondAttribute="bottom" id="4qF-8F-ToL"/>
+                                            <constraint firstAttribute="trailing" secondItem="WpH-vx-n6L" secondAttribute="trailing" id="P7D-ln-cQI"/>
+                                            <constraint firstItem="WpH-vx-n6L" firstAttribute="top" secondItem="UjS-6C-rrp" secondAttribute="top" id="TR4-lk-5Cd"/>
+                                            <constraint firstItem="s5P-78-RzE" firstAttribute="centerY" secondItem="UjS-6C-rrp" secondAttribute="centerY" constant="50" id="ibe-ft-4Id"/>
+                                            <constraint firstItem="WpH-vx-n6L" firstAttribute="leading" secondItem="UjS-6C-rrp" secondAttribute="leading" id="kep-RI-KMa"/>
                                             <constraint firstItem="s5P-78-RzE" firstAttribute="centerX" secondItem="UjS-6C-rrp" secondAttribute="centerX" id="yRr-Qe-2U1"/>
                                         </constraints>
                                     </view>
@@ -52,10 +54,13 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soft_egg" translatesAutoresizingMaskIntoConstraints="NO" id="pIS-0F-edB" userLabel="Soft Egg ImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="246"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-r7-qRH" userLabel="Soft Egg Button">
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-r7-qRH" userLabel="Soft Egg Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="246"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Soft"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Soft">
+                                                            <fontDescription key="titleFontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQv-bA-ZAf"/>
                                                         </connections>
@@ -78,10 +83,13 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medium_egg" translatesAutoresizingMaskIntoConstraints="NO" id="buG-Ip-k7Q" userLabel="Medium Egg ImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="111" height="246"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc9-SZ-G7l" userLabel="Medium Egg Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc9-SZ-G7l" userLabel="Medium Egg Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="111" height="246"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Medium"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Medium">
+                                                            <fontDescription key="titleFontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="muG-PR-6Yy"/>
                                                         </connections>
@@ -104,10 +112,13 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hard_egg" translatesAutoresizingMaskIntoConstraints="NO" id="g8J-fa-tsd" userLabel="Hard Egg ImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="246"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jub-vS-QzF" userLabel="Hard Egg Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jub-vS-QzF" userLabel="Hard Egg Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="111.5" height="246"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Hard"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Hard">
+                                                            <fontDescription key="titleFontDescription" name="Kailasa" family="Kailasa" pointSize="20"/>
+                                                        </buttonConfiguration>
                                                         <connections>
                                                             <action selector="hardnessSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fim-kG-CFf"/>
                                                         </connections>
@@ -158,7 +169,13 @@
                     </view>
                     <connections>
                         <outlet property="additionalLabel" destination="s5P-78-RzE" id="KLI-ab-pbv"/>
+                        <outlet property="hardButton" destination="jub-vS-QzF" id="PoG-iu-w4p"/>
+                        <outlet property="hardImageView" destination="g8J-fa-tsd" id="uiV-bV-mab"/>
+                        <outlet property="mediumButton" destination="Sc9-SZ-G7l" id="SWr-T1-toz"/>
+                        <outlet property="mediumImageView" destination="buG-Ip-k7Q" id="dsq-EJ-SmL"/>
                         <outlet property="progressView" destination="5Pv-Z9-OZf" id="Y0X-WS-CSA"/>
+                        <outlet property="softButton" destination="h5u-r7-qRH" id="YB4-aE-tRG"/>
+                        <outlet property="softImageView" destination="pIS-0F-edB" id="RhR-5o-lZA"/>
                         <outlet property="titleLabel" destination="WpH-vx-n6L" id="1aq-6g-53r"/>
                     </connections>
                 </viewController>
