@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FE6322C28C4E923006B8807 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FE6322B28C4E923006B8807 /* alarm_sound.mp3 */; };
 		8FFDD8D028136C970084E09C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDD8CF28136C970084E09C /* AppDelegate.swift */; };
 		8FFDD8D228136C970084E09C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDD8D128136C970084E09C /* SceneDelegate.swift */; };
 		8FFDD8D428136C970084E09C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDD8D328136C970084E09C /* ViewController.swift */; };
 		8FFDD8D728136C970084E09C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDD8D528136C970084E09C /* Main.storyboard */; };
 		8FFDD8D928136C970084E09C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDD8D828136C970084E09C /* Assets.xcassets */; };
 		8FFDD8DC28136C970084E09C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDD8DA28136C970084E09C /* LaunchScreen.storyboard */; };
-		8FFDD8E628136F820084E09C /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDD8E528136F820084E09C /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FE6322B28C4E923006B8807 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		8FFDD8CC28136C970084E09C /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFDD8CF28136C970084E09C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FFDD8D128136C970084E09C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		8FFDD8D828136C970084E09C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FFDD8DB28136C970084E09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FFDD8DD28136C970084E09C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FFDD8E528136F820084E09C /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm_sound.mp3; path = "../../../EggTimer-iOS13/EggTimer/alarm_sound.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +63,9 @@
 				8FFDD8D328136C970084E09C /* ViewController.swift */,
 				8FFDD8D528136C970084E09C /* Main.storyboard */,
 				8FFDD8D828136C970084E09C /* Assets.xcassets */,
-				8FFDD8E528136F820084E09C /* alarm_sound.mp3 */,
 				8FFDD8DA28136C970084E09C /* LaunchScreen.storyboard */,
 				8FFDD8DD28136C970084E09C /* Info.plist */,
+				8FE6322B28C4E923006B8807 /* alarm_sound.mp3 */,
 			);
 			path = EggTimer;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			files = (
 				8FFDD8DC28136C970084E09C /* LaunchScreen.storyboard in Resources */,
 				8FFDD8D928136C970084E09C /* Assets.xcassets in Resources */,
-				8FFDD8E628136F820084E09C /* alarm_sound.mp3 in Resources */,
+				8FE6322C28C4E923006B8807 /* alarm_sound.mp3 in Resources */,
 				8FFDD8D728136C970084E09C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

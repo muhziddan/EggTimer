@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         
         timePassed = 0
         
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
             if self.timePassed < totalTime {
                 self.timePassed += 1
                 print ("\(self.timePassed) seconds, progress \(Float(self.timePassed) / Float(totalTime))")
