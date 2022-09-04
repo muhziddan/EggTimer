@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         "Hard": 12
     ]
     
-    var timePassed = 0
     var timer = Timer()
     var player: AVAudioPlayer?
     
@@ -81,13 +80,13 @@ class ViewController: UIViewController {
     
     func timeProgress(totalTime: Int) {
         
-        timePassed = 0
+        var timePassed = 0
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-            if self.timePassed < totalTime {
-                self.timePassed += 1
-                print ("\(self.timePassed) seconds, progress \(Float(self.timePassed) / Float(totalTime))")
-                self.progressView.setProgress(Float(self.timePassed) / Float(totalTime), animated: true)
+            if timePassed < totalTime {
+                timePassed += 1
+                print ("\(timePassed) seconds, progress \(Float(timePassed) / Float(totalTime))")
+                self.progressView.setProgress(Float(timePassed) / Float(totalTime), animated: true)
             } else {
                 Timer.invalidate()
                 self.titleLabel.text = "Done!!!"
