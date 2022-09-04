@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func hardnessSelected(_ sender: UIButton) {
         
         timer.invalidate()
-        
+        viewHandler()
         additionalLabel.alpha = 0.0
         progressView.progress = 0
         
@@ -92,14 +92,7 @@ class ViewController: UIViewController {
                 Timer.invalidate()
                 self.titleLabel.text = "Done!!!"
                 
-                UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
-                    self.softButton.alpha = 1.0
-                    self.softImageView.alpha = 1.0
-                    self.mediumButton.alpha = 1.0
-                    self.mediumImageView.alpha = 1.0
-                    self.hardButton.alpha = 1.0
-                    self.hardImageView.alpha = 1.0
-                }, completion: nil)
+                self.viewHandler()
                 
                 self.playSound()
                 
@@ -128,5 +121,16 @@ class ViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func viewHandler() {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
+            self.softButton.alpha = 1.0
+            self.softImageView.alpha = 1.0
+            self.mediumButton.alpha = 1.0
+            self.mediumImageView.alpha = 1.0
+            self.hardButton.alpha = 1.0
+            self.hardImageView.alpha = 1.0
+        }, completion: nil)
     }
 }
